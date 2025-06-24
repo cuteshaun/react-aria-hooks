@@ -8,7 +8,7 @@ Screen readers do **not automatically announce visual updates** like “message 
 
 `useAnnouncer` fixes this by allowing you to programmatically send messages to screen readers — without changing focus or breaking layout.
 
----
+--
 
 ## ✨ Features
 
@@ -16,7 +16,7 @@ Screen readers do **not automatically announce visual updates** like “message 
 - ♿️ Built with accessibility standards in mind
 - ⚛️ Works with any React project (TypeScript-ready)
 
----
+--
 
 ## 📦 Installation
 
@@ -50,10 +50,11 @@ function SearchResults() {
 }
 ```
 
-## 💡 When to use useAnnouncer
-Screen readers do not automatically announce visual changes unless focus is moved or special ARIA techniques are used. The `useAnnouncer` hook helps bridge that gap.
-
-Use it when you want to announce changes that aren’t automatically communicated.
+## 💡 When to use Announcer
+Use useAnnouncer when screen readers might miss dynamic updates, especially if:
+- Nothing visually obvious changes.
+- Focus stays in place.
+- The update is visually clear, but not voiced.
 
 ### ✅ Common use cases
 
