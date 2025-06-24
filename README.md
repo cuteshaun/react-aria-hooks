@@ -12,7 +12,7 @@ Screen readers do **not automatically announce visual updates** like “message 
 ## ✨ Features
 
 - 🔊 `useAnnouncer` — announce messages to screen readers via `aria-live`
-- ♿️ Built with accessibility standards in mind
+- ♿️ Built with accessibility standards
 - ⚛️ Works with any React project (TypeScript-ready)
 
 
