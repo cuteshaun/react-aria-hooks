@@ -18,15 +18,25 @@ npm install react-aria-hooks
 
 ```tsx
 import { useAnnouncer } from "react-aria-hooks";
+import { useState } from "react";
 
-function Example() {
+function SearchResults() {
   const announce = useAnnouncer();
+  const [results, setResults] = useState(0);
 
-  const handleClick = () => {
-    announce("Button clicked");
+  const handleSearch = () => {
+    // Simulate search...
+    const newResults = Math.floor(Math.random() * 10);
+    setResults(newResults);
+    announce(`${newResults} results found`);
   };
 
-  return <button onClick={handleClick}>Click me</button>;
+  return (
+    <div>
+      <button onClick={handleSearch}>Search</button>
+      <p>Results: {results}</p>
+    </div>
+  );
 }
 ```
 
