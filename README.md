@@ -8,7 +8,6 @@ Screen readers do **not automatically announce visual updates** like “message 
 
 `useAnnouncer` fixes this by allowing you to programmatically send messages to screen readers — without changing focus or breaking layout.
 
---
 
 ## ✨ Features
 
@@ -16,7 +15,6 @@ Screen readers do **not automatically announce visual updates** like “message 
 - ♿️ Built with accessibility standards in mind
 - ⚛️ Works with any React project (TypeScript-ready)
 
---
 
 ## 📦 Installation
 
