@@ -1,18 +1,45 @@
 {
   "name": "react-aria-hooks",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "Accessible React hooks for ARIA live regions, focus traps, and more.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
-  "build": "tsup src/index.ts --dts --format esm,cjs --out-dir dist --clean",
-  "dev": "tsup src/index.ts --dts --format esm,cjs --out-dir dist --watch"
-},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "build": "tsup src/index.ts --dts --format esm,cjs --out-dir dist --clean",
+    "dev": "tsup src/index.ts --dts --format esm,cjs --out-dir dist --watch"
+  },
+  "keywords": [
+  "react",
+  "a11y",
+  "accessibility",
+  "hooks",
+  "aria",
+  "live region",
+  "focus trap",
+  "screenreader",
+  "visually hidden",
+  "skip link",
+  "keyboard navigation",
+  "aria tabs",
+  "reduced motion"
+  ],
+  "author": "Andrii Tsapko",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cuteshaun/react-aria-hooks"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
     "@types/react": "^19.1.8",
