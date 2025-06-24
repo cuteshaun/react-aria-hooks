@@ -1,7 +1,7 @@
 import { useAnnouncer } from "./hooks/useAnnouncer"
 
 
-function App() {
+export function App() {
   const announce = useAnnouncer();
 
   const handleClick = () => {
@@ -15,5 +15,3 @@ function App() {
     </div>
   );
 }
-
-export default App
