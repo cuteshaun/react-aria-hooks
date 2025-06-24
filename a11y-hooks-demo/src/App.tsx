@@ -1,6 +1,5 @@
 import { useAnnouncer } from "./hooks/useAnnouncer"
 
-
 export function App() {
   const announce = useAnnouncer();
 
