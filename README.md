@@ -2,11 +2,21 @@
 
 A lightweight collection of accessible React hooks (a11y) for building inclusive web apps.
 
+## 📣 What is `useAnnouncer`?
+
+Screen readers do **not automatically announce visual updates** like “message sent” or “7 results found.” Unless focus moves or you use ARIA live regions, users may miss important information.
+
+`useAnnouncer` fixes this by allowing you to programmatically send messages to screen readers — without changing focus or breaking layout.
+
+---
+
 ## ✨ Features
 
 - 🔊 `useAnnouncer` — announce messages to screen readers via `aria-live`
 - ♿️ Built with accessibility standards in mind
 - ⚛️ Works with any React project (TypeScript-ready)
+
+---
 
 ## 📦 Installation
 
