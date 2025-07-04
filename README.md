@@ -1,20 +1,19 @@
 # react-aria-hooks
 
-A lightweight collection of accessible React hooks (a11y) for building inclusive web apps.
+A lightweight collection of accessible React hooks (a11y) for building inclusive, screen-reader-friendly web applications.
 
 ## 📣 What is `useAnnouncer`?
 
-Screen readers do **not automatically announce visual updates** like “message sent” or “7 results found.” Unless focus moves or you use ARIA live regions, users may miss important information.
+Screen readers **do not automatically announce dynamic visual updates** like “Message sent” or “7 results found.” Unless you move focus or use ARIA live regions, these updates may go unnoticed.
 
-`useAnnouncer` fixes this by allowing you to programmatically send messages to screen readers — without changing focus or breaking layout.
-
+The `useAnnouncer` hook solves this by allowing you to **programmatically announce messages to screen readers** — without moving focus or affecting layout.
 
 ## ✨ Features
 
-- 🔊 `useAnnouncer` — announce messages to screen readers via `aria-live`
-- ♿️ Built with accessibility standards
-- ⚛️ Works with any React project (TypeScript-ready)
-
+* 🔊 `useAnnouncer` — announce messages via `aria-live` regions
+* ♿️ Follows accessibility best practices and standards (WAI-ARIA)
+* ⚛️ Works with any React project (TypeScript-ready, zero dependencies)
+* 🧹 Easy to integrate, composable and tree-shakable
 
 ## 📦 Installation
 
@@ -22,7 +21,7 @@ Screen readers do **not automatically announce visual updates** like “message 
 npm install react-aria-hooks
 ```
 
-## 🔧 Usage
+## 🔧 Quick Start
 
 ```tsx
 import { useAnnouncer } from "react-aria-hooks";
@@ -33,7 +32,6 @@ function SearchResults() {
   const [results, setResults] = useState(0);
 
   const handleSearch = () => {
-    // Simulate search...
     const newResults = Math.floor(Math.random() * 10);
     setResults(newResults);
     announce(`${newResults} results found`);
@@ -48,45 +46,47 @@ function SearchResults() {
 }
 ```
 
-## 💡 When to use Announcer
-Use useAnnouncer when screen readers might miss dynamic updates, especially if:
-- Nothing visually obvious changes.
-- Focus stays in place.
-- The update is visually clear, but not voiced.
+## 💡 When to Use `useAnnouncer`
 
-### ✅ Common use cases
+Use it when:
 
-#### 🔔 Notifications and flash messages
-```ts
-announce("Message sent successfully");
-```
-#### ❌ Form validation (focus doesn't move)
-```ts
-announce("Email field is required");
-```
-#### 🧠 Custom selects or dropdowns
-```ts
-announce("Sort by: Price (low to high)");
-```
-#### 🔄 Async updates
-```ts
-announce("Data loaded");
-```
-#### 🔍 Filter/search result counts
-```ts
-announce("7 results found");
-```
-#### 🧭 Pagination or tab navigation
-```ts
-announce("You are on page 2 of 10");
-```
+* Dynamic content updates without changing focus
+* Screen readers may miss an update
+* You want to notify the user without visual disruption
 
-More hooks coming soon: `useFocusTrap`, `useVisuallyHidden`, `useSkipLink`, and more!
+### ✅ Common Use Cases
+
+* 🔔 Toasts or flash messages
+  `announce("Message sent successfully");`
+
+* ❌ Form validation (when focus doesn’t change)
+  `announce("Email field is required");`
+
+* 🧠 Custom selects / dropdowns
+  `announce("Sort by: Price (low to high)");`
+
+* 🔄 Async updates
+  `announce("Data loaded");`
+
+* 🔍 Search results
+  `announce("7 results found");`
+
+* 🗱 Pagination or tab switch
+  `announce("You are on page 2 of 10");`
+
+---
+
+## 🛠️ Coming Soon
+
+More accessible hooks on the way:
+
+* `useFocusTrap` – trap focus in modals or drawers
+* `useVisuallyHidden` – visually hide content while keeping it screen reader-accessible
+* `useSkipLink` – create skip-to-content links
+* And more!
+
+---
+
+## 📄 License
 
 MIT © [Andrii Tsapko](https://github.com/cuteshaun)
-
-
-
-
-
-
