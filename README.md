@@ -59,10 +59,10 @@ Use it when:
 ```ts
 announce("Message sent successfully"); // Toasts or alerts
 announce("Email field is required");   // Form errors
-announce("Sort by: Price");           // Custom selects
-announce("Data loaded");              // Async events
-announce("7 results found");          // Search
-announce("Page 2 of 10");            // Pagination
+announce("Sort by: Price");            // Custom selects
+announce("Data loaded");               // Async events
+announce("7 results found");           // Search
+announce("Page 2 of 10");              // Pagination
 ```
 
 ## 🛠️ Coming Soon
