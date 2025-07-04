@@ -1,19 +1,19 @@
 # react-aria-hooks
 
-A lightweight collection of accessible React hooks (a11y) for building inclusive, screen-reader-friendly web applications.
+A lightweight set of accessible React hooks (a11y) for building inclusive, screen reader–friendly web applications.
 
 ## 📣 What is `useAnnouncer`?
 
-Screen readers **do not automatically announce dynamic visual updates** like “Message sent” or “7 results found.” Unless you move focus or use ARIA live regions, these updates may go unnoticed.
+Screen readers **do not automatically announce dynamic updates** like “Message sent” or “7 results found.” Unless focus moves or an ARIA live region is used, these changes can go unnoticed.
 
-The `useAnnouncer` hook solves this by allowing you to **programmatically announce messages to screen readers** — without moving focus or affecting layout.
+The `useAnnouncer` hook enables you to **programmatically send messages to screen readers** — without disrupting the layout or moving focus.
 
 ## ✨ Features
 
 * 🔊 `useAnnouncer` — announce messages via `aria-live` regions
-* ♿️ Follows accessibility best practices and standards (WAI-ARIA)
-* ⚛️ Works with any React project (TypeScript-ready, zero dependencies)
-* 🧹 Easy to integrate, composable and tree-shakable
+* ♿️ Follows accessibility best practices (WAI-ARIA)
+* ⚛️ Works in any React project (TypeScript-ready, zero dependencies)
+* 🧹 Composable, tree-shakable, and easy to integrate
 
 ## 📦 Installation
 
@@ -50,39 +50,28 @@ function SearchResults() {
 
 Use it when:
 
-* Dynamic content updates without changing focus
-* Screen readers may miss an update
-* You want to notify the user without visual disruption
+* Content updates without a focus change
+* Screen readers might miss visual changes
+* You want to notify users non-visually
 
-### ✅ Common Use Cases
+### ✅ Examples
 
-* 🔔 Toasts or flash messages
-  `announce("Message sent successfully");`
-
-* ❌ Form validation (when focus doesn’t change)
-  `announce("Email field is required");`
-
-* 🧠 Custom selects / dropdowns
-  `announce("Sort by: Price (low to high)");`
-
-* 🔄 Async updates
-  `announce("Data loaded");`
-
-* 🔍 Search results
-  `announce("7 results found");`
-
-* 🗱 Pagination or tab switch
-  `announce("You are on page 2 of 10");`
-
----
+```ts
+announce("Message sent successfully"); // Toasts or alerts
+announce("Email field is required");   // Form errors
+announce("Sort by: Price");           // Custom selects
+announce("Data loaded");              // Async events
+announce("7 results found");          // Search
+announce("Page 2 of 10");            // Pagination
+```
 
 ## 🛠️ Coming Soon
 
-More accessible hooks on the way:
+More accessible hooks are on the way:
 
-* `useFocusTrap` – trap focus in modals or drawers
-* `useVisuallyHidden` – visually hide content while keeping it screen reader-accessible
-* `useSkipLink` – create skip-to-content links
+* `useFocusTrap` – trap focus inside modals or drawers
+* `useVisuallyHidden` – visually hide content but expose it to assistive tech
+* `useSkipLink` – add skip-to-content links
 * And more!
 
 ---
